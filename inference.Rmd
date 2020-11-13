@@ -1,0 +1,36 @@
+---
+title: "Inference and Modelling"
+author: "Aris Warsito"
+date: "13 November 2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Sampling Model Parameters and Estimates
+### Textbook link
+
+This video matches the textbook sections on [the sampling model for polls External link](https://rafalab.github.io/dsbook/inference.html#the-sampling-model-for-polls) and the first part of [populations, samples, parameters and estimates External link](https://rafalab.github.io/dsbook/inference.html#populations-samples-parameters-and-estimates).
+
+### Key points
+
+-   The task of statistical inference is to estimate an unknown population parameter using observed data from a sample.
+-   In a sampling model, the collection of elements in the urn is called the _population._
+-   A _parameter_ is a number that summarizes data for an entire population.
+-   A _sample_ is observed data from a subset of the population.
+-   An _estimate_ is a summary of the observed data about a parameter that we believe is informative. It is a data-driven guess of the population parameter.
+-   We want to predict the proportion of the blue beads in the urn, the parameter p. The proportion of red beads in the urn is 1−p and the _spread_ is 2p−1.
+-   The sample proportion is a random variable. Sampling gives random results drawn from the population distribution.
+
+### Code: Function for taking a random draw from a specific urn
+
+The **dslabs** package includes a function for taking a random draw of size n from the urn described in the video:
+
+```r
+library(tidyverse)
+library(dslabs)
+take_poll(25)    # draw 25 beads
+```
+
